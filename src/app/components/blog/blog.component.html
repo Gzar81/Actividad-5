@@ -1,60 +1,36 @@
 <main class="wrapper">
     <div class="area1">
-      Estoy en el main Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo autem doloribus magnam
-      cupiditate sint. Quos debitis alias tempora doloremque nostrum, soluta non at quia quis accusantium molestiae
-      dolor, magni quo! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ad accusamus eligendi iusto soluta.
-      Eligendi temporibus quo nemo ab sit dolore praesentium harum molestiae. Quia qui porro modi iste optio?
+        <div class="contenido">
+            <form [formGroup]="miFormulario" (ngSubmit)="recogerDatosForm()">
+                <div>
+                    <label for="name">Nombre </label>
+                    <input type="text" formControlName="name">
+                </div>
+                <div>
+                    <label for="email">Email </label>
+                    <input type="email" formControlName="email">
+                </div>
+                <div>
+                    <label for="age">Edad </label>
+                    <input type="text" formControlName="age">
+                </div>
+                <input type="submit" value="Enviar" [disabled]="!miFormulario.valid">
+            </form>
+        </div>
 
     </div>
     <div class="area2">
-      Estoy en el main Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo autem doloribus magnam cupiditate
-      sint. Quos debitis alias tempora doloremque nostrum, soluta non at quia quis accusantium molestiae dolor, magni
-      quo! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ad accusamus eligendi iusto soluta. Eligendi
-      temporibus quo nemo ab sit dolore praesentium harum molestiae. Quia qui porro modi iste optio?Estoy en el main Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo autem doloribus magnam cupiditate
-      sint. Quos debitis alias tempora doloremque nostrum, soluta non at quia quis accusantium molestiae dolor, magni
-      quo! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ad accusamus eligendi iusto soluta. Eligendi
-      temporibus quo nemo ab sit dolore praesentium harum molestiae. Quia qui porro modi iste optio?Estoy en el main Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo autem doloribus magnam cupiditate
-      sint. Quos debitis alias tempora doloremque nostrum, soluta non at quia quis accusantium molestiae dolor, magni
-      quo! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ad accusamus eligendi iusto soluta. Eligendi
-      temporibus quo nemo ab sit dolore praesentium harum molestiae. Quia qui porro modi iste optio?Estoy en el main Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo autem doloribus magnam cupiditate
-      sint. Quos debitis alias tempora doloremque nostrum, soluta non at quia quis accusantium molestiae dolor, magni
-      quo! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ad accusamus eligendi iusto soluta. Eligendi
-      temporibus quo nemo ab sit dolore praesentium harum molestiae. Quia qui porro modi iste optio? Estoy en el main Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo autem doloribus magnam cupiditate
-      sint. Quos debitis alias tempora doloremque nostrum, soluta non at quia quis accusantium molestiae dolor, magni
-      quo! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ad accusamus eligendi iusto soluta. Eligendi
-      temporibus quo nemo ab sit dolore praesentium harum molestiae. Quia qui porro modi iste optio?Estoy en el main Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo autem doloribus magnam cupiditate
-      sint. Quos debitis alias tempora doloremque nostrum, soluta non at quia quis accusantium molestiae dolor, magni
-      quo! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ad accusamus eligendi iusto soluta. Eligendi
-      temporibus quo nemo ab sit dolore praesentium harum molestiae. Quia qui porro modi iste optio?Estoy en el main Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo autem doloribus magnam cupiditate
-      sint. Quos debitis alias tempora doloremque nostrum, soluta non at quia quis accusantium molestiae dolor, magni
-      quo! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ad accusamus eligendi iusto soluta. Eligendi
-      temporibus quo nemo ab sit dolore praesentium harum molestiae. Quia qui porro modi iste optio?Estoy en el main Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo autem doloribus magnam cupiditate
-      sint. Quos debitis alias tempora doloremque nostrum, soluta non at quia quis accusantium molestiae dolor, magni
-      quo! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ad accusamus eligendi iusto soluta. Eligendi
-      temporibus quo nemo ab sit dolore praesentium harum molestiae. Quia qui porro modi iste optio?Estoy en el main Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo autem doloribus magnam cupiditate
-      sint. Quos debitis alias tempora doloremque nostrum, soluta non at quia quis accusantium molestiae dolor, magni
-      quo! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ad accusamus eligendi iusto soluta. Eligendi
-      temporibus quo nemo ab sit dolore praesentium harum molestiae. Quia qui porro modi iste optio?Estoy en el main Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo autem doloribus magnam cupiditate
-      sint. Quos debitis alias tempora doloremque nostrum, soluta non at quia quis accusantium molestiae dolor, magni
-      quo! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ad accusamus eligendi iusto soluta. Eligendi
-      temporibus quo nemo ab sit dolore praesentium harum molestiae. Quia qui porro modi iste optio?Estoy en el main Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo autem doloribus magnam cupiditate
-      sint. Quos debitis alias tempora doloremque nostrum, soluta non at quia quis accusantium molestiae dolor, magni
-      quo! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ad accusamus eligendi iusto soluta. Eligendi
-      temporibus quo nemo ab sit dolore praesentium harum molestiae. Quia qui porro modi iste optio?Estoy en el main Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo autem doloribus magnam cupiditate
-      sint. Quos debitis alias tempora doloremque nostrum, soluta non at quia quis accusantium molestiae dolor, magni
-      quo! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ad accusamus eligendi iusto soluta. Eligendi
-      temporibus quo nemo ab sit dolore praesentium harum molestiae. Quia qui porro modi iste optio? Estoy en el main Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo autem doloribus magnam cupiditate
-      sint. Quos debitis alias tempora doloremque nostrum, soluta non at quia quis accusantium molestiae dolor, magni
-      quo! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ad accusamus eligendi iusto soluta. Eligendi
-      temporibus quo nemo ab sit dolore praesentium harum molestiae. Quia qui porro modi iste optio?Estoy en el main Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo autem doloribus magnam cupiditate
-      sint. Quos debitis alias tempora doloremque nostrum, soluta non at quia quis accusantium molestiae dolor, magni
-      quo! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ad accusamus eligendi iusto soluta. Eligendi
-      temporibus quo nemo ab sit dolore praesentium harum molestiae. Quia qui porro modi iste optio?Estoy en el main Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo autem doloribus magnam cupiditate
-      sint. Quos debitis alias tempora doloremque nostrum, soluta non at quia quis accusantium molestiae dolor, magni
-      quo! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ad accusamus eligendi iusto soluta. Eligendi
-      temporibus quo nemo ab sit dolore praesentium harum molestiae. Quia qui porro modi iste optio?Estoy en el main Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo autem doloribus magnam cupiditate
-      sint. Quos debitis alias tempora doloremque nostrum, soluta non at quia quis accusantium molestiae dolor, magni
-      quo! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ad accusamus eligendi iusto soluta. Eligendi
-      temporibus quo nemo ab sit dolore praesentium harum molestiae. Quia qui porro modi iste optio?
+        <div class="article-container">
+            <article *ngFor="let usuario of arrUsuarios; let i = index; let par = even; let impar = odd">
+                <div class="usuario" [ngClass]="{'darkTeme': impar, 'lightTeme': par}">
+                <h3>Usuario</h3>
+                <p>Nombre: {{usuario.name}}</p>
+                <p>Email: {{usuario.email}}</p>
+                <p>Edad: {{usuario.age}}</p>
+                <small>Noticia número: {{i+1}}</small>
+                </div>
+                
+            </article>
+        </div>
     </div>
   </main>
