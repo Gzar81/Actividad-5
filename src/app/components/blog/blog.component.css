@@ -1,0 +1,25 @@
+.wrapper {
+    display: flex;
+    border: 2px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 32px 16px 32px 16px;
+    
+}
+
+.area1{
+    display: flex;
+    flex-basis: 50%;
+    height: min-content;
+    border: 2px solid yellow;
+    margin: 32px;
+    padding-top: 250px;
+}
+
+.area2{
+    display: flex;
+    flex-basis: 50%;
+    border: 2px solid red;
+    margin: 32px;
+}
+
