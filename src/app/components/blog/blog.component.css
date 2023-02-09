@@ -21,6 +21,7 @@
     justify-content: center;
     width: fit-content;
     padding: 2px 16px 2px 16px;
+    margin-top: 0.5rem;
     font-weight: bolder;
     background-color: yellow;
 }
@@ -35,8 +36,9 @@
 }
 
 ::placeholder {
-    font-size:x-small;
+    font-size: x-small;
     color: rgba(128, 128, 128, 0.521);
+    text-align: center;
 }
 
 .usuario {
@@ -176,20 +178,27 @@ small {
 .formTitle {
     display: flex;
     flex-direction: column;
+    width: 28%;
+    margin-bottom: 0.5rem;
 }
 
 .FPict {
     display: flex;
     flex-direction: column;
-
+    width: 28%;
+    margin-bottom: 0.5rem;
 }
 
 .formText {
     display: flex;
     flex-direction: column;
+    width: 28%;
+    margin-bottom: 0.5rem;
 }
 
 .formDate {
     display: flex;
     flex-direction: column;
+    width: 28%;
+    margin-bottom: 0.5rem;
 }
