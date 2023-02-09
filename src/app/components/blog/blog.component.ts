@@ -43,7 +43,8 @@ export class BlogComponent {
 
   recogerDatosForm(){
     let usuario = this.miFormulario.value;
-    this.arrUsuarios.push(usuario)
+    this.arrUsuarios.push(usuario);
+    this.miFormulario.reset();
          
   }
 }
