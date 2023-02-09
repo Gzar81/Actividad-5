@@ -24,15 +24,19 @@
 
     </div>
     <div class="area2">
-        <h1>LATEST NEWS</h1>
+        <h1 class="latestNews">HOT NEWS</h1>
         <div class="article-container">
             <article *ngFor="let usuario of arrUsuarios; let i = index; let par = even; let impar = odd">
                 <div class="usuario" [ngClass]="{'darkTeme': impar, 'lightTeme': par}">
-                <h3>{{usuario.date}}</h3>
-                <figcaption>{{usuario.title}}</figcaption>
-                <figure><img [src]="usuario.url" alt=""></figure>
-                <p>{{usuario.text}}</p>
-                <small>Noticia número: {{i+1}}</small>
+                <div class="user-title-date">                
+                <div class="userTitle">{{(usuario.title).toUpperCase()}}</div>
+                <h3 class="date">{{usuario.date}}</h3>
+                </div>
+                <div class="userContent">
+                <figure class="picture"><img [src]="usuario.url" alt=""></figure>
+                <p class="pictureDescription">{{usuario.text}}</p>
+                </div>
+                <small>News Nº {{i+1}}</small>
                 </div>
                 
             </article>
