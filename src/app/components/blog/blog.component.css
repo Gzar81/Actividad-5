@@ -1,32 +1,45 @@
 .wrapper {
     display: flex;
     flex-direction: row;
-    border: 2px solid black;
     margin-left: auto;
     margin-right: auto;
     padding: 32px 16px 32px 16px;
-    
+
 }
 
-.area1{
+.area1 {
     display: flex;
     flex-basis: 50%;
     height: min-content;
-    border: 2px solid yellow;
-    margin: 32px;
+    /* border: 2px solid yellow; */
+    margin: 2rem;
     padding-top: 250px;
 }
 
-.area2{
+.post {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    padding: 2px 16px 2px 16px;
+    font-weight: bolder;
+    background-color: yellow;
+}
+
+.area2 {
     display: flex;
     flex-direction: column;
     flex-basis: 50%;
     justify-content: center;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     margin: 32px;
 }
 
-.usuario{
+::placeholder {
+    font-size: xx-small;
+    color: rgba(128, 128, 128, 0.521);
+}
+
+.usuario {
     display: flex;
     flex-direction: column;
     justify-content: left;
@@ -39,17 +52,17 @@
     margin: 20px 0px 20px 0px;
 }
 
-.userContent{
+.userContent {
     display: flex;
 }
 
-.user-title-date{
+.user-title-date {
     display: flex;
     width: 100%;
     margin-bottom: 0.5rem;
 }
 
-.userTitle{
+.userTitle {
     display: flex;
     width: 50%;
     justify-content: center;
@@ -57,71 +70,126 @@
     font-weight: bolder;
 }
 
-.date{
+.date {
     display: flex;
     width: 50%;
-    justify-content: center;
+    justify-content: right;
+    font-size: small;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
 }
 
-.picture{
+.picture {
     display: flex;
     width: 50%;
+    padding: 0rem 0.5rem 0rem 0.5rem;
 }
 
-img{
+img {
     width: 100%;
     height: auto;
+
 }
 
-.pictureDescription{
+.pictureDescription {
     display: flex;
     width: 50%;
+    padding: 0rem 1rem 0rem 0.5rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 
-.darkTeme{
+.darkTeme {
     display: flex;
     width: 100%;
     background-color: rgba(25, 20, 20, 0.33);
     color: yellow;
 }
 
-.lightTeme{
+.lightTeme {
     display: flex;
     width: 100%;
     background-color: rgba(255, 255, 0, 0.348);
     font-weight: bold;
 }
 
-.article-container{
+.article-container {
     display: flex;
     flex-direction: column-reverse;
     width: 100%;
 }
 
-.contenido{
-    display: flex;
-}
-
-form{
+.contenido {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-}
-
-.latestNews{
-    display: flex;
     width: 100%;
-    justify-content: center;    
+    padding: 1rem;
+    justify-content: center;
     background-color: rgba(79, 43, 3, 0.433);
     box-shadow: 1px 1px 10px #444;
     border-radius: 10px;
     font-family: 'Times New Roman', Times, serif;
-    font-style: oblique;
     font-weight: bold;
     font-stretch: extra-expanded;
-    font-size:xx-large;
+    font-size: xx-large;
     color: yellow;
-    
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 16px;
+}
+
+.hotNews {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: rgba(79, 43, 3, 0.433);
+    box-shadow: 1px 1px 10px #444;
+    border-radius: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: bold;
+    font-stretch: extra-expanded;
+    font-size: xx-large;
+    color: yellow;
+
+}
+
+.publish {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    font-size: xx-large;
+
+}
+
+small {
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    font-style: italic;
+}
+
+.formTitle {
+    display: flex;
+    flex-direction: column;
+}
+
+.FPict {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.formText {
+    display: flex;
+    flex-direction: column;
+}
+
+.formDate {
+    display: flex;
+    flex-direction: column;
 }
