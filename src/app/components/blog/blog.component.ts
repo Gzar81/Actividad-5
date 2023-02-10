@@ -47,4 +47,10 @@ export class BlogComponent {
     this.miFormulario.reset();
          
   }
+  shouldShowTitleRequiredError() {
+
+    const title = this.miFormulario.controls['title'];
+
+    return title.touched && title.hasError('required');
+  }
 }

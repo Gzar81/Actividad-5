@@ -4,7 +4,7 @@
             <h1 class="publish">PUBLISH YOUR NEWS HERE</h1>
             <form [formGroup]="miFormulario" (ngSubmit)="recogerDatosForm()">
                 <div class="formTitle">
-                    <label for="title">Title </label>
+                    <label for="title">Title <div *ngIf="shouldShowTitleRequiredError()">Title is required.</div></label>
                     <input type="text" formControlName="title" placeholder="3 - 20 characters">
                 </div>
                 <div class="FPict">
@@ -19,7 +19,7 @@
                     <label for="date">Date </label>
                     <input type="text" formControlName="date" placeholder="dd/mm/yy" >
                 </div>
-                <input [class]="miFormulario.valid ? 'post' : 'fillAll'" type="submit" [value]="miFormulario.valid ? 'Post' : 'Fill in all the fields'" [disabled]="!miFormulario.valid">
+                <input [class]="miFormulario.valid ? 'post' : 'fillAll'" type="submit" [value]="miFormulario.valid ? 'Post' : 'Fill in all the fields'" [disabled]="miFormulario.invalid">
             </form>
         </div>
 
