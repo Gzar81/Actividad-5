@@ -99,12 +99,14 @@
 .picture {
     display: flex;
     width: 50%;
+    height:fit-content;
     padding: 0rem 0.5rem 0rem 0.5rem;
+    position: relative;
 }
 
 img {
     width: 100%;
-    height: auto;
+    /* height: 100%; */
 
 }
 
@@ -193,7 +195,7 @@ small {
 .formTitle {
     display: flex;
     flex-direction: column;
-    width: 28%;
+    min-width: 28%;
     margin-bottom: 0.5rem;
 }
 
@@ -217,3 +219,25 @@ small {
     width: 28%;
     margin-bottom: 0.5rem;
 }
+
+.required{
+    display: flex;
+}
+
+.blink{
+    display: flex;
+    margin-left: 10px;
+    animation: blink 2s ease-in-out ;
+  }
+  
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }

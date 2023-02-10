@@ -4,20 +4,39 @@
             <h1 class="publish">PUBLISH YOUR NEWS HERE</h1>
             <form [formGroup]="miFormulario" (ngSubmit)="recogerDatosForm()">
                 <div class="formTitle">
-                    <label for="title">Title <div *ngIf="shouldShowTitleRequiredError()">Title is required.</div></label>
-                    <input type="text" formControlName="title" placeholder="3 - 20 characters">
+                    <label for="title">Title </label>
+                    <div class="required">
+                        <input type="text" formControlName="title" placeholder="3 - 20 characters">
+                        <div class="titleRequired blink" *ngIf="titleRequiredError()">Title is required</div>
+                        <div class="mintitleLenght blink" *ngIf="mintitleLengthError()">Min title size 3 characters</div>
+                        <div class="maxtitleLength blink" *ngIf="maxtitleLengthError()">Max title size 20 characters</div>
+                    </div>
+                    
                 </div>
-                <div class="FPict">
+                <div class="formTitle">
                     <label for="url">Picture </label>
-                    <input type="text" formControlName="url" placeholder="paste the url here">
+                    <div class="required">
+                        <input type="text" formControlName="url" placeholder="paste the url here">
+                        <div class="urlRequired blink" *ngIf="urlRequiredError()">Url is required</div>
+                        <div class="urlPattern blink" *ngIf="urlPatternError()">Please paste a valid url</div>
+                    </div>
                 </div>
-                <div class="formText">
+                <div class="formTitle">
                     <label for="text">Text </label>
-                    <input type="text" formControlName="text" placeholder="30 - 300 characters">
+                    <div class="required">
+                        <input type="text" formControlName="text" placeholder="30 - 300 characters">
+                        <div class="textRequired blink" *ngIf="textRequiredError()">Please write a description</div>
+                        <div class="mintextLenght blink" *ngIf="mintextLengthError()">Min title size 3 characters</div>
+                        <div class="maxtextLength blink" *ngIf="maxtextLengthError()">Max title size 20 characters</div>
+                    </div>
                 </div>
-                <div class="formDate">
+                <div class="formTitle">
                     <label for="date">Date </label>
-                    <input type="text" formControlName="date" placeholder="dd/mm/yy" >
+                    <div class="required">
+                        <input type="text" formControlName="date" placeholder="dd/mm/yy" >
+                        <div class="dateRequired blink" *ngIf="dateRequiredError()">Enter the current date</div>
+                        <div class="datePattern blink" *ngIf="datePatternError()">Date format must be dd/mm/yy</div>
+                    </div>
                 </div>
                 <input [class]="miFormulario.valid ? 'post' : 'fillAll'" type="submit" [value]="miFormulario.valid ? 'Post' : 'Fill in all the fields'" [disabled]="miFormulario.invalid">
             </form>

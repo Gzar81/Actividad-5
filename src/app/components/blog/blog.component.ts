@@ -19,7 +19,7 @@ export class BlogComponent {
       ]),
       url: new FormControl('', [
         Validators.required,
-        Validators.minLength(12)
+        Validators.pattern(/^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/)
       ]),
       text: new FormControl('', [
         Validators.required,
@@ -47,10 +47,64 @@ export class BlogComponent {
     this.miFormulario.reset();
          
   }
-  shouldShowTitleRequiredError() {
+  titleRequiredError() {
 
     const title = this.miFormulario.controls['title'];
 
     return title.touched && title.hasError('required');
   }
+
+  mintitleLengthError(){
+    const title = this.miFormulario.controls['title'];
+
+    return title.touched && title.hasError('minlength');
+  }
+
+  maxtitleLengthError(){
+    const title = this.miFormulario.controls['title'];
+
+    return title.touched && title.hasError('maxlength');
+  }
+
+  urlRequiredError(){
+    const url = this.miFormulario.controls['url'];
+
+    return url.touched && url.hasError('required');
+  }
+  urlPatternError(){
+    const url = this.miFormulario.controls['url'];
+
+    return url.touched && url.hasError('pattern');
+  }
+
+  textRequiredError() {
+
+    const text = this.miFormulario.controls['text'];
+
+    return text.touched && text.hasError('required');
+  }
+
+  mintextLengthError(){
+    const text = this.miFormulario.controls['text'];
+
+    return text.touched && text.hasError('minlength');
+  }
+
+  maxtextLengthError(){
+    const text = this.miFormulario.controls['text'];
+
+    return text.touched && text.hasError('maxlength');
+  }
+
+  dateRequiredError(){
+    const date = this.miFormulario.controls['date'];
+
+    return date.touched && date.hasError('required');
+  }
+  datePatternError(){
+    const date = this.miFormulario.controls['date'];
+
+    return date.touched && date.hasError('pattern');
+  }
+
 }
