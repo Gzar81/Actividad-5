@@ -24,6 +24,19 @@
     margin-top: 0.5rem;
     font-weight: bolder;
     background-color: yellow;
+    transition: 2s;
+}
+
+.fillAll{
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    padding: 2px 16px 2px 16px;
+    margin-top: 0.5rem;
+    font-weight: bolder;
+    color: yellow;
+    background-color: black;
+    transition: 2s;
 }
 
 .area2 {

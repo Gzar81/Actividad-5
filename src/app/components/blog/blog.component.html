@@ -1,5 +1,5 @@
 <main class="wrapper">
-    <div class="area1">
+    <section class="area1">
         <div class="contenido">
             <h1 class="publish">PUBLISH YOUR NEWS HERE</h1>
             <form [formGroup]="miFormulario" (ngSubmit)="recogerDatosForm()">
@@ -19,12 +19,12 @@
                     <label for="date">Date </label>
                     <input type="text" formControlName="date" placeholder="dd/mm/yy" >
                 </div>
-                <input class="post" type="submit" [value]="miFormulario.valid ? 'Post' : 'Fill in all the fields'" [disabled]="!miFormulario.valid">
+                <input [class]="miFormulario.valid ? 'post' : 'fillAll'" type="submit" [value]="miFormulario.valid ? 'Post' : 'Fill in all the fields'" [disabled]="!miFormulario.valid">
             </form>
         </div>
 
-    </div>
-    <div class="area2">
+    </section>
+    <section class="area2">
         <h1 class="hotNews">HOT NEWS</h1>
         <div class="article-container">
             <article *ngFor="let usuario of arrUsuarios; let i = index; let par = even; let impar = odd">
@@ -42,5 +42,5 @@
                 
             </article>
         </div>
-    </div>
+    </section>
   </main>
