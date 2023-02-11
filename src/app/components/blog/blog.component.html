@@ -46,15 +46,15 @@
     <section class="area2">
         <h1 class="hotNews">HOT NEWS</h1>
         <div class="article-container">
-            <article *ngFor="let usuario of arrUsuarios; let i = index; let par = even; let impar = odd">
-                <div class="usuario" [ngClass]="{'darkTeme': impar, 'lightTeme': par}">
-                <div class="user-title-date">                
-                <div class="userTitle">{{(usuario.title).toUpperCase()}}</div>
-                <h3 class="date">{{usuario.date}}</h3>
+            <article *ngFor="let news of arrNews; let i = index; let par = even; let impar = odd">
+                <div class="news" [ngClass]="{'darkTeme': impar, 'lightTeme': par}">
+                <div class="news-title-date">                
+                <div class="newsTitle">{{(news.title).toUpperCase()}}</div>
+                <h3 class="date">{{news.date}}</h3>
                 </div>
-                <div class="userContent">
-                <figure class="picture"><img [src]="usuario.url" alt=""></figure>
-                <p class="pictureDescription">{{usuario.text}}</p>
+                <div class="newsContent">
+                <figure class="picture"><img [src]="news.url" alt=""></figure>
+                <p class="pictureDescription">{{news.text}}</p>
                 </div>
                 <small>News Nº {{i+1}}</small>
                 </div>
