@@ -28,7 +28,7 @@ export class BlogComponent {
       ]),
       date: new FormControl('',[
         Validators.required,
-        Validators.pattern(/^\d{2}\/\d{2}\/\d{2}$/)
+        Validators.pattern(/^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/[0-9]{2}$/)
       ])
     }, [])
 
@@ -57,13 +57,13 @@ export class BlogComponent {
   mintitleLengthError(){
     const title = this.miFormulario.controls['title'];
 
-    return title.touched && title.hasError('minlength');
+    return title.dirty && title.hasError('minlength');
   }
 
   maxtitleLengthError(){
     const title = this.miFormulario.controls['title'];
 
-    return title.touched && title.hasError('maxlength');
+    return title.dirty && title.hasError('maxlength');
   }
 
   urlRequiredError(){
@@ -74,7 +74,7 @@ export class BlogComponent {
   urlPatternError(){
     const url = this.miFormulario.controls['url'];
 
-    return url.touched && url.hasError('pattern');
+    return url.dirty && url.hasError('pattern');
   }
 
   textRequiredError() {
@@ -87,13 +87,13 @@ export class BlogComponent {
   mintextLengthError(){
     const text = this.miFormulario.controls['text'];
 
-    return text.touched && text.hasError('minlength');
+    return text.dirty && text.hasError('minlength');
   }
 
   maxtextLengthError(){
     const text = this.miFormulario.controls['text'];
 
-    return text.touched && text.hasError('maxlength');
+    return text.dirty && text.hasError('maxlength');
   }
 
   dateRequiredError(){
@@ -104,7 +104,7 @@ export class BlogComponent {
   datePatternError(){
     const date = this.miFormulario.controls['date'];
 
-    return date.touched && date.hasError('pattern');
+    return date.dirty && date.hasError('pattern');
   }
 
 }
