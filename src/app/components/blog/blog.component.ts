@@ -28,8 +28,7 @@ export class BlogComponent {
         Validators.maxLength(300)
       ]),
       date: new FormControl('',[
-        Validators.required/* ,
-        Validators.pattern(/^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/[0-9]{2}$/) */
+        Validators.required
       ])
     }, [])
 
@@ -107,10 +106,20 @@ export class BlogComponent {
 
     return (date.touched || this.buttonSubmitTouched) && date.hasError('required');
   }
-  /* currentDateError(){
+
+  /* dateCurrentError() {
     const date = this.miFormulario.controls['date'].value;
-
-    return date.dirty && date.hasError('pattern');
+    const currentDate = new Date().toISOString().substring(0, 10);
+    return this.miFormulario.controls['date'].dirty && date !== currentDate;
   } */
-
+  dateCurrentError() {
+    const date = this.miFormulario.controls['date'].value;
+    const currentDate = new Date().toISOString().substring(0, 10);
+    const invalidDate = date !== currentDate;
+    this.miFormulario.controls['date'].setErrors(invalidDate ? { 'invalidDate': true } : null);
+    return (this.miFormulario.controls['date'].dirty || this.buttonSubmitTouched) &&  invalidDate;
+  }
+  
+  
+  
 }

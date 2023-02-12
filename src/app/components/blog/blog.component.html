@@ -35,7 +35,7 @@
                     <div class="required">
                         <input type="date" formControlName="date">
                         <div class="dateRequired blink" *ngIf="dateRequiredError()">Date required</div>
-                        <!-- <div class="currentDateError blink" *ngIf="currentDateError()">Select current date</div> -->
+                        <div class="dateCurrentError blink" *ngIf="dateCurrentError()">Enter current date</div>                 
                     </div>
                 </div>
                 <input [class]="miFormulario.valid ? 'post' : 'fillAll'" type="submit" value="Post" >
