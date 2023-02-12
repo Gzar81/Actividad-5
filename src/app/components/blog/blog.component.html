@@ -11,7 +11,7 @@
                         <div class="mintitleLenght blink" *ngIf="mintitleLengthError()">Min 3 characters</div>
                         <div class="maxtitleLength blink" *ngIf="maxtitleLengthError()">Max 20 characters</div>
                     </div>
-                    
+
                 </div>
                 <div class="formTitle">
                     <label for="url">Picture </label>
@@ -35,10 +35,10 @@
                     <div class="required">
                         <input type="date" formControlName="date">
                         <div class="dateRequired blink" *ngIf="dateRequiredError()">Date required</div>
-                        <div class="dateCurrentError blink" *ngIf="dateCurrentError()">Enter current date</div>                 
+                        <div class="dateCurrentError blink" *ngIf="dateCurrentError()">Enter current date</div>
                     </div>
                 </div>
-                <input [class]="miFormulario.valid ? 'post' : 'fillAll'" type="submit" value="Post" >
+                <input [class]="miFormulario.valid ? 'post' : 'fillAll'" type="submit" value="Post">
             </form>
         </div>
 
@@ -48,18 +48,18 @@
         <div class="article-container">
             <article *ngFor="let news of arrNews; let i = index; let par = even; let impar = odd">
                 <div class="news" [ngClass]="{'darkTeme': impar, 'lightTeme': par}">
-                <div class="news-title-date">                
-                <div class="newsTitle">{{(news.title).toUpperCase()}}</div>
-                <h3 class="date">{{news.date}}</h3>
+                    <div class="news-title-date">
+                        <div class="newsTitle">{{(news.title).toUpperCase()}}</div>
+                        <h3 class="date">{{news.date}}</h3>
+                    </div>
+                    <div class="newsContent">
+                        <figure class="picture"><img [src]="news.url" alt=""></figure>
+                        <p class="pictureDescription">{{news.text}}</p>
+                    </div>
+                    <small>News Nº {{i+1}}</small>
                 </div>
-                <div class="newsContent">
-                <figure class="picture"><img [src]="news.url" alt=""></figure>
-                <p class="pictureDescription">{{news.text}}</p>
-                </div>
-                <small>News Nº {{i+1}}</small>
-                </div>
-                
+
             </article>
         </div>
     </section>
-  </main>
+</main>
