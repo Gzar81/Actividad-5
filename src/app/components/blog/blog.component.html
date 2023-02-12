@@ -33,12 +33,12 @@
                 <div class="formTitle">
                     <label for="date">Date </label>
                     <div class="required">
-                        <input type="text" formControlName="date" placeholder="dd/mm/yy" >
+                        <input type="date" formControlName="date">
                         <div class="dateRequired blink" *ngIf="dateRequiredError()">Date required</div>
-                        <div class="datePattern blink" *ngIf="datePatternError()">Format dd/mm/yy</div>
+                        <!-- <div class="currentDateError blink" *ngIf="currentDateError()">Select current date</div> -->
                     </div>
                 </div>
-                <input [class]="miFormulario.valid ? 'post' : 'fillAll'" type="submit" [value]="miFormulario.valid ? 'Post' : 'Fill in all the fields'" [disabled]="miFormulario.invalid">
+                <input [class]="miFormulario.valid ? 'post' : 'fillAll'" type="submit" value="Post" >
             </form>
         </div>
 
